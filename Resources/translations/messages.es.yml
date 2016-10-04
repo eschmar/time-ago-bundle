@@ -1,4 +1,3 @@
-
 time_ago:
   past:
     days: 'hace # días'
@@ -13,4 +12,4 @@ time_ago:
     minute: 'en 1 minuto'
     minutes: 'en # minutos'
     hour: 'en 1 hora'
-hours: 'en # horas'
+    hours: 'en # horas'

@@ -1,8 +1,7 @@
-
 time_ago:
   past:
     days: 'vor # Tagen'
-    now: 'jetzt'
+    now: 'gerade jetzt'
     minute: 'vor einer Minute'
     minutes: 'vor # Minuten'
     hour: 'vor einer Stunde'
