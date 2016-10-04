@@ -56,27 +56,18 @@ class TimeAgoExtension extends \Twig_Extension
         $diff = time() - $date->format('U');
         $format = $format ? $format : $this->format;
 
-        $prefix = '.future';
-        if ($diff > -5) {
-            $prefix = '.past';
-        }
-
+        $prefix = $diff > -5 ? '.past' : '.future';
         $diff = abs($diff);
         $days = floor($diff / 86400);
 
-        if ($days >= 7) {
-            return $date->format($format);
-        }
+        if ($days >= 7) return $date->format($format);
+        if ($days > 1) return $this->translator->trans('time_ago' . $prefix . '.days', ['#' => $days]);
 
-        if ($days > 1) {
-            return $this->translator->trans('time_ago' . $prefix . '.days', ['#' => $days]);
-        }
-
-        if($diff < 60) return $this->translator->trans('time_ago' . $prefix . '.now');
-        if($diff < 120) return $this->translator->trans('time_ago' . $prefix . '.minute');
-        if($diff < 3600) return $this->translator->trans('time_ago' . $prefix . '.minutes', ['#' => floor($diff / 60)]);
-        if($diff < 7200) return $this->translator->trans('time_ago' . $prefix . '.hour');
-        if($diff < 86400) return $this->translator->trans('time_ago' . $prefix . '.hours', ['#' => floor($diff / 3600)]);
+        if ($diff < 60) return $this->translator->trans('time_ago' . $prefix . '.now');
+        if ($diff < 120) return $this->translator->trans('time_ago' . $prefix . '.minute');
+        if ($diff < 3600) return $this->translator->trans('time_ago' . $prefix . '.minutes', ['#' => floor($diff / 60)]);
+        if ($diff < 7200) return $this->translator->trans('time_ago' . $prefix . '.hour');
+        if ($diff < 86400) return $this->translator->trans('time_ago' . $prefix . '.hours', ['#' => floor($diff / 3600)]);
 
         return $date->format($format);
     }
