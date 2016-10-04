@@ -1,5 +1,6 @@
 # TimeAgoBundle
-Provides a simple twig filter for expressing time difference in words for Symfony.
+Provides a simple twig filter for expressing time difference in words for Symfony. 
+Uses a range of +-7 days, after that, the actual date is returned.
 
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
@@ -15,8 +16,12 @@ new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ## Usage
 ```
 $now = new \DateTime();
+
 $foo = new \DateTime();
-$foo = $foo->modify('-3 minutes');
+$foo->modify('-3 minutes');
+
+$bar = new \DateTime();
+$bar->modify('-3 months');
 ```
 
 ```twig
@@ -25,6 +30,9 @@ $foo = $foo->modify('-3 minutes');
 
 {{ foo|ago('r') }}
 {# 3 minutes ago #}
+
+{{ bar|ago('r') }}
+{# actual date in 'r' format #}
 ```
 
 # License
