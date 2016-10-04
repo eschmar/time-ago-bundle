@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: 'il y a # jours'
+    now: 'maintenant'
+    minute: 'il y a 1 minute'
+    minutes: 'il y a # minutes'
+    hour: 'il y a 1 heure'
+    hours: 'il y a # heures'
+  future:
+    days: 'dans # jours'
+    now: 'maintenant'
+    minute: 'dans 1 minute'
+    minutes: 'dans # minutes'
+    hour: 'dans 1 heure'
+    hours: 'dans # heures'
