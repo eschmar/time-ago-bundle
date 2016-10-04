@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# dagar sedan'
+    now: 'nyss'
+    minute: 'en minut sedan'
+    minutes: '# minuter sedan'
+    hour: 'en timme sedan'
+    hours: '# timmar sedan'
+  future:
+    days: 'i # dagar'
+    now: 'nu'
+    minute: 'i en minut'
+    minutes: 'i # minuter'
+    hour: 'i en timme'
+    hours: 'i # timmar'
