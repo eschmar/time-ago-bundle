@@ -14,7 +14,7 @@ new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ```
 
 ## Usage
-```
+```php
 $now = new \DateTime();
 
 $foo = new \DateTime();
