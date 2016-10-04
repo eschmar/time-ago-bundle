@@ -2,7 +2,7 @@
     "name": "eschmar/time-ago-bundle",
     "license": "MIT",
     "type": "symfony-bundle",
-    "keywords": ["time", "ago", "symfony", "twig"],
+    "keywords": ["time", "ago", "symfony", "bundle", "twig"],
     "description": "Provides a simple twig filter for expressing time difference in words.",
     "homepage": "https://github.com/eschmar/time-ago-bundle",
     "authors": [

@@ -5,7 +5,7 @@ namespace Eschmar\TimeAgoBundle\Twig;
 use Symfony\Component\Translation\TranslatorInterface;
 
 /**
- * Twig integration for TimeAgoHelper class.
+ * Provides a simple twig filter for expressing time difference in words.
  *
  * @author Marcel Eschmann, @eschmar
  **/
@@ -60,6 +60,7 @@ class TimeAgoExtension extends \Twig_Extension
 
         $prefix = TRANSLATION_NAMESPACE;
         $prefix .= $diff > -5 ? '.past' : '.future';
+
         $diff = abs($diff);
         $days = floor($diff / 86400);
 
