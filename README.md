@@ -13,9 +13,18 @@ new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ```
 
 ## Usage
+```
+$now = new \DateTime();
+$foo = new \DateTime();
+$foo = $foo->modify('-3 minutes');
+```
+
 ```twig
-{{ foo.date|ago }}
-{{ foo.date|ago('r') }}
+{{ now|ago }}
+{# just now #}
+
+{{ foo|ago('r') }}
+{# 3 minutes ago #}
 ```
 
 # License
