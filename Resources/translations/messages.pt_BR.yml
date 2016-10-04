@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# dias atrás'
+    now: 'agora'
+    minute: '1 minuto atrás'
+    minutes: '# minutos atrás'
+    hour: '1 hora atrás'
+    hours: '# horas atrás'
+  future:
+    days: 'em # dias'
+    now: 'agora'
+    minute: 'em 1 minuto'
+    minutes: 'em # minutos'
+    hour: 'em 1 hora'
+    hours: 'em # horas'
