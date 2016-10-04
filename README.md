@@ -1,8 +1,5 @@
-# time-ago-bundle
-Provides relative time in words.
-
 # TimeAgoBundle
-Provides twig filter for expressing time difference in words.
+Provides a simple twig filter for expressing time difference in words.
 
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
