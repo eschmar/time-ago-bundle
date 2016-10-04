@@ -1,0 +1,16 @@
+
+time_ago:
+  past:
+    days: 'hace # días'
+    now: 'ahora'
+    minute: 'hace 1 minuto'
+    minutes: 'hace # minutos'
+    hour: 'hace 1 hora'
+    hours: 'hace # horas'
+  future:
+    days: 'en # días'
+    now: 'ahora'
+    minute: 'en 1 minuto'
+    minutes: 'en # minutos'
+    hour: 'en 1 hora'
+hours: 'en # horas'
