@@ -1,0 +1,16 @@
+
+time_ago:
+  past:
+    days: 'vor # Tagen'
+    now: 'jetzt'
+    minute: 'vor einer Minute'
+    minutes: 'vor # Minuten'
+    hour: 'vor einer Stunde'
+    hours: 'vor # Stunden'
+  future:
+    days: 'in # Tagen'
+    now: 'jetzt'
+    minute: 'in einer Minute'
+    minutes: 'in # Minuten'
+    hour: 'in einer Stunde'
+    hours: 'in # Stunden'
