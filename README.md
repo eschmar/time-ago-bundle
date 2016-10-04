@@ -22,6 +22,9 @@ $foo->modify('-3 minutes');
 
 $bar = new \DateTime();
 $bar->modify('-3 months');
+
+$foobar = new \DateTime();
+$foobar->modify('+4 hours');
 ```
 
 ```twig
@@ -33,6 +36,9 @@ $bar->modify('-3 months');
 
 {{ bar|ago('r') }}
 {# actual date in 'r' format #}
+
+{{ foobar|ago }}
+{# in 4 hours #}
 ```
 
 Change default format in `config.yml`:
@@ -41,6 +47,18 @@ Change default format in `config.yml`:
 eschmar_time_ago:
     format: 'Y-m-d H:i:s'
 ```
+
+# Translations available
+
+* English
+* Swedish
+* German
+* Dutch
+* Spanish
+* Portuguese (Brazil)
+* Slovenian
+* Turkish
+* Polish
 
 # License
 MIT License
