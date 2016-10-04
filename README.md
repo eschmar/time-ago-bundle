@@ -35,5 +35,12 @@ $bar->modify('-3 months');
 {# actual date in 'r' format #}
 ```
 
+Change default format in `config.yml`:
+
+```yml
+eschmar_time_ago:
+    format: 'Y-m-d H:i:s'
+```
+
 # License
 MIT License
