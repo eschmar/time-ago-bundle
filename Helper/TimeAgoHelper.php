@@ -5,7 +5,7 @@ namespace Eschmar\TimeAgoBundle\Helper;
 /**
  * Time ago helper class.
  *
- * @author Marcel Eschmann, @Eschmar
+ * @author Marcel Eschmann, @eschmar
  **/
 class TimeAgoHelper
 {
