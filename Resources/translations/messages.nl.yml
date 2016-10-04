@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# dagen gelden'
+    now: 'zojuist'
+    minute: '1 minuut geleden'
+    minutes: '# minuten geleden'
+    hour: '1 uur geleden'
+    hours: '# uur geleden'
+  future:
+    days: 'over # dagen'
+    now: 'nu'
+    minute: 'in 1 minuut'
+    minutes: 'in # minuten'
+    hour: 'in 1 uur'
+    hours: 'in # uur'
