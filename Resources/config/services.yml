@@ -1,0 +1,8 @@
+services:
+    # TWIG
+    time_ago.twig_extension:
+        class: Eschmar\TimeAgoBundle\Twig\TimeAgoExtension
+        public: false
+        arguments: ['@translator', '%eschmar_time_ago.format%']
+        tags:
+            - { name: twig.extension }
