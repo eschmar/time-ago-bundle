@@ -41,7 +41,7 @@ class TimeAgoExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('ago', array($this, 'agoFilter')),
+            new \Twig_SimpleFilter('ago', [$this, 'agoFilter']),
         ];
     }
 

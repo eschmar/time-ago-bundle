@@ -41,7 +41,7 @@ $foobar->modify('+4 hours');
 {# in 4 hours #}
 ```
 
-Change default format in `config.yml`:
+Change [default format](http://php.net/manual/en/function.date.php) in `config.yml`:
 
 ```yml
 eschmar_time_ago:
@@ -50,15 +50,20 @@ eschmar_time_ago:
 
 # Translations available
 
-* English
-* Swedish
-* German
 * Dutch
-* Spanish
-* Portuguese (Brazil)
-* Slovenian
-* Turkish
+* English
+* French
+* German
+* Hungarian
+* Italian
 * Polish
+* Portuguese (Brazil)
+* Russian
+* Slovenian
+* Spanish
+* Swedish
+* Turkish
+* Ukranian
 
 # License
 MIT License
