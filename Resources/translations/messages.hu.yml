@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# nappal ezelőtt'
+    now: 'épp most'
+    minute: '1 perce'
+    minutes: '# perccel ezelőtt'
+    hour: '1 órája'
+    hours: '# órával ezelőtt'
+  future:
+    days: '# napon belül'
+    now: 'épp most'
+    minute: '1 percen belül'
+    minutes: '# percen belül'
+    hour: '1 órán belül'
+    hours: '# órán belül'
