@@ -21,7 +21,7 @@ class TimeAgoExtension extends \Twig_Extension
      **/
     private $format;
 
-    public function __construct(TranslatorInterface $translator, $format = 'r')
+    public function __construct(TranslatorInterface $translator, $format)
     {
         $this->translator = $translator;
         $this->format = $format;
