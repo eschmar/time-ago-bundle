@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# hari yang lalu'
+    now: 'baru saja'
+    minute: '1 menit yang lalu'
+    minutes: '# menit yang lalu'
+    hour: '1 jam yang lalu'
+    hours: '# jam yang lalu'
+  future:
+    days: '# hari ke depan'
+    now: 'sekarang ini juga'
+    minute: '1 menit lagi'
+    minutes: '# menit lagi'
+    hour: '1 jam lagi'
+    hours: '# jam lagi'
