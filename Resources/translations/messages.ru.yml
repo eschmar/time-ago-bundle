@@ -7,7 +7,7 @@ time_ago:
     hour: '1 час назад'
     hours: '# часов назад'
   future:
-    days: 'в течении # days'
+    days: 'в течении # дней'
     now: 'сейчас'
     minute: 'в течении 1 минуты'
     minutes: 'в течении # минут'
