@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# दिन पहले'
+    now: 'अभी'
+    minute: '1 मिनट पहले'
+    minutes: '# मिनट पहले'
+    hour: '1 घंटे पहले'
+    hours: '# घंटे पहले'
+  future:
+    days: '# दिनों में'
+    now: 'अभी इस वक्त'
+    minute: '1 मिनट में'
+    minutes: '# मिनट में'
+    hour: '1 घंटे में'
+    hours: '# घंटे में'
