@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: 'acum # zile'
+    now: 'acum'
+    minute: 'acum un minut'
+    minutes: 'acum # minute'
+    hour: 'acum o oră'
+    hours: 'acum # ore'
+  future:
+    days: 'în # zile'
+    now: 'acum'
+    minute: 'în un minut'
+    minutes: 'în # minute'
+    hour: 'în o oră'
+    hours: 'în # ore'
