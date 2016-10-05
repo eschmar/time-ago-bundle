@@ -55,6 +55,7 @@ eschmar_time_ago:
 * Dutch
 * English
 * French
+* Finnish
 * German
 * Hindi
 * Hungarian
