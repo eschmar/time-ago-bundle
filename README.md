@@ -50,20 +50,26 @@ eschmar_time_ago:
 
 # Translations available
 
+* Belarusian
+* Croatian
 * Dutch
 * English
 * French
 * German
+* Hindi
 * Hungarian
+* Indonesian
 * Italian
 * Polish
 * Portuguese (Brazil)
+* Romanian
 * Russian
 * Slovenian
 * Spanish
 * Swedish
 * Turkish
 * Ukranian
+* Vietnamese
 
 # License
 MIT License
