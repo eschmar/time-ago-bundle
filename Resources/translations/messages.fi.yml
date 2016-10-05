@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# päivää sitten'
+    now: 'juuri nyt'
+    minute: '1 minuutti sitten'
+    minutes: '# minuuttia sitten'
+    hour: '1 tunti sitten'
+    hours: '# tuntia sitten'
+  future:
+    days: '# päivän kuluttua'
+    now: 'juuri nyt'
+    minute: '1 minuutin kuluttua'
+    minutes: '# minuutin kuluttua'
+    hour: '1 tunnin kuluttua'
+    hours: '# tunnin kuluttua'
