@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# ngày trước'
+    now: 'chỉ cần bây giờ'
+    minute: '1 phút trước'
+    minutes: '# Vài phút trước'
+    hour: '1 giờ trước'
+    hours: '# nhiều giờ trước'
+  future:
+    days: 'trong # ngày'
+    now: 'ngay bây giờ'
+    minute: 'trong 1 phút'
+    minutes: '# phút'
+    hour: 'trong 1 giờ'
+    hours: '# giờ'
