@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: '# araw ang nakakalipas'
+    now: 'ngayon lang'
+    minute: '1 minuto ang nakakalipas'
+    minutes: 'mga # minuto ang nakakalipas'
+    hour: '1 oras ang nakakalipas'
+    hours: 'mga # oras ang nakakalipas'
+  future:
+    days: 'sa loob ng # araw'
+    now: 'ngayon lang'
+    minute: 'sa loob ng 1 minuto'
+    minutes: 'sa loob ng # minuto'
+    hour: 'sa loob ng 1 oras'
+    hours: 'sa loob ng # oras'
