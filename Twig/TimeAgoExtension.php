@@ -58,7 +58,7 @@ class TimeAgoExtension extends \Twig_Extension
         $diff = time() - $date->format('U');
         $format = $format ? $format : $this->format;
 
-        $prefix = TRANSLATION_NAMESPACE;
+        $prefix = self::TRANSLATION_NAMESPACE;
         $prefix .= $diff > -5 ? '.past' : '.future';
 
         $diff = abs($diff);
