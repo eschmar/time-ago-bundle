@@ -68,6 +68,7 @@ eschmar_time_ago:
 * Slovenian
 * Spanish
 * Swedish
+* Tagalog
 * Turkish
 * Ukranian
 * Vietnamese
