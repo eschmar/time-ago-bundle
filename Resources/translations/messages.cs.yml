@@ -1,0 +1,15 @@
+time_ago:
+  past:
+    days: 'před # dny'
+    now: 'právě teď'
+    minute: 'před 1 minutou'
+    minutes: 'před # minutami'
+    hour: 'před 1 hodinou'
+    hours: 'před # hodinami'
+  future:
+    days: 'za # dni'
+    now: 'nyní'
+    minute: 'za 1 minutu'
+    minutes: 'za # minut'
+    hour: 'za 1 hodinu'
+    hours: 'za # hodin'
