@@ -65,13 +65,17 @@ class TimeAgoExtension extends \Twig_Extension
         $days = floor($diff / 86400);
 
         if ($days >= 7) return $date->format($format);
-        if ($days > 1) return $this->translator->trans($prefix . '.days', ['#' => $days]);
+        if ($days > 1) return $this->translator->transChoice($prefix . '.days', $days, ['#' => $days]);
 
         if ($diff < 60) return $this->translator->trans($prefix . '.now');
-        if ($diff < 120) return $this->translator->trans($prefix . '.minute');
-        if ($diff < 3600) return $this->translator->trans($prefix . '.minutes', ['#' => floor($diff / 60)]);
-        if ($diff < 7200) return $this->translator->trans($prefix . '.hour');
-        if ($diff < 86400) return $this->translator->trans($prefix . '.hours', ['#' => floor($diff / 3600)]);
+        
+        $m = floor($diff / 60);
+        if ($diff < 120) return $this->translator->transChoice($prefix . '.minutes', 1);
+        if ($diff < 3600) return $this->translator->transChoice($prefix . '.minutes', $m, ['#' => $m]);
+
+        $h = floor($diff / 3600);
+        if ($diff < 7200) return $this->translator->transChoice($prefix . '.hours', 1);
+        if ($diff < 86400) return $this->translator->transChoice($prefix . '.hours', $h, ['#' => $h]);
 
         return $date->format($format);
     }

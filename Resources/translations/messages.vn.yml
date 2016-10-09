@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: '# ngày trước'
+    days: ']1,Inf[ # ngày trước'
     now: 'chỉ cần bây giờ'
-    minute: '1 phút trước'
-    minutes: '# Vài phút trước'
-    hour: '1 giờ trước'
-    hours: '# nhiều giờ trước'
+    minutes: '{1} 1 phút trước|]1,Inf[ # Vài phút trước'
+    hours: '{1} 1 giờ trước|]1,Inf[ # nhiều giờ trước'
   future:
-    days: 'trong # ngày'
+    days: ']1,Inf[ trong # ngày'
     now: 'ngay bây giờ'
-    minute: 'trong 1 phút'
-    minutes: '# phút'
-    hour: 'trong 1 giờ'
-    hours: '# giờ'
+    minutes: '{1} trong 1 phút|]1,Inf[ # phút'
+    hours: '{1} trong 1 giờ|]1,Inf[ # giờ'

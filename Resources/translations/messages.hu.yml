@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: '# nappal ezelőtt'
+    days: ']1,Inf[ # nappal ezelőtt'
     now: 'épp most'
-    minute: '1 perce'
-    minutes: '# perccel ezelőtt'
-    hour: '1 órája'
-    hours: '# órával ezelőtt'
+    minutes: '{1} 1 perce|]1,Inf[ # perccel ezelőtt'
+    hours: '{1} 1 órája|]1,Inf[ # órával ezelőtt'
   future:
-    days: '# napon belül'
+    days: ']1,Inf[ # napon belül'
     now: 'épp most'
-    minute: '1 percen belül'
-    minutes: '# percen belül'
-    hour: '1 órán belül'
-    hours: '# órán belül'
+    minutes: '{1} 1 percen belül|]1,Inf[ # percen belül'
+    hours: '{1} 1 órán belül|]1,Inf[ # órán belül'

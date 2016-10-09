@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: 'acum # zile'
+    days: ']1,Inf[ acum # zile'
     now: 'acum'
-    minute: 'acum un minut'
-    minutes: 'acum # minute'
-    hour: 'acum o oră'
-    hours: 'acum # ore'
+    minutes: '{1} acum un minut|]1,Inf[ acum # minute'
+    hours: '{1} acum o oră|]1,Inf[ acum # ore'
   future:
-    days: 'în # zile'
+    days: ']1,Inf[ în # zile'
     now: 'acum'
-    minute: 'în un minut'
-    minutes: 'în # minute'
-    hour: 'în o oră'
-    hours: 'în # ore'
+    minutes: '{1} în un minut|]1,Inf[ în # minute'
+    hours: '{1} în o oră|]1,Inf[ în # ore'

@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: '# gün önce'
+    days: ']1,Inf[ # gün önce'
     now: 'şimdi'
-    minute: '1 dakika önce'
-    minutes: '# dakika önce'
-    hour: '1 saat önce'
-    hours: '# saat önce'
+    minutes: '{1} 1 dakika önce|]1,Inf[ # dakika önce'
+    hours: '{1} 1 saat önce|]1,Inf[ # saat önce'
   future:
-    days: '# gün içinde'
+    days: ']1,Inf[ # gün içinde'
     now: 'tam şimdi'
-    minute: '1 dakika içinde'
-    minutes: '# dakika içinde'
-    hour: '1 saat içinde'
-    hours: '# saat içinde'
+    minutes: '{1} 1 dakika içinde|]1,Inf[ # dakika içinde'
+    hours: '{1} 1 saat içinde|]1,Inf[ # saat içinde'

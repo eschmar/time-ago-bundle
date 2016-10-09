@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: '# days ago'
+    days: '{1} 1 day ago|]1,Inf[ # days ago'
     now: 'just now'
-    minute: '1 minute ago'
-    minutes: '# minutes ago'
-    hour: '1 hour ago'
-    hours: '# hours ago'
+    minutes: '{1} 1 minute ago|]1,Inf[ # minutes ago'
+    hours: '{1} 1 hour ago|]1,Inf[ # hours ago'
   future:
-    days: 'in # days'
+    days: '{1} in 1 day|]1,Inf[ in # days'
     now: 'right now'
-    minute: 'in 1 minute'
-    minutes: 'in # minutes'
-    hour: 'in 1 hour'
-    hours: 'in # hours'
+    minutes: '{1} in 1 minute|]1,Inf[ in # minutes'
+    hours: '{1} in 1 hour|]1,Inf[ in # hours'

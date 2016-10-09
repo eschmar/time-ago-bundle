@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: '# dagar sedan'
+    days: ']1,Inf[ # dagar sedan'
     now: 'nyss'
-    minute: 'en minut sedan'
-    minutes: '# minuter sedan'
-    hour: 'en timme sedan'
-    hours: '# timmar sedan'
+    minutes: '{1} en minut sedan|]1,Inf[ # minuter sedan'
+    hours: '{1} en timme sedan|]1,Inf[ # timmar sedan'
   future:
-    days: 'om # dagar'
+    days: ']1,Inf[ om # dagar'
     now: 'nu'
-    minute: 'om en minut'
-    minutes: 'om # minuter'
-    hour: 'om en timme'
-    hours: 'om # timmar'
+    minutes: '{1} om en minut|]1,Inf[ om # minuter'
+    hours: '{1} om en timme|]1,Inf[ om # timmar'

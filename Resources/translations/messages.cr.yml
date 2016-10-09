@@ -1,15 +1,11 @@
 time_ago:
   past:
-    days: 'prije # dana'
+    days: ']1,Inf[ prije # dana'
     now: 'upravo sad'
-    minute: 'prije 1 minutu'
-    minutes: 'prije # minuta'
-    hour: 'prije # sat'
-    hours: 'prije # sati'
+    minutes: '{1} prije 1 minutu|]1,Inf[ prije # minuta'
+    hours: '{1} prije # sat|]1,Inf[ prije # sati'
   future:
-    days: 'za # dana'
+    days: ']1,Inf[ za # dana'
     now: 'sada'
-    minute: 'za 1 minutu'
-    minutes: 'za # minuta'
-    hour: 'za 1 sat'
-    hours: 'za # sati'
+    minutes: '{1} za 1 minutu|]1,Inf[ za # minuta'
+    hours: '{1} za 1 sat|]1,Inf[ za # sati'

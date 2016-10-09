@@ -1,15 +1,27 @@
 time_ago:
   past:
-    days: '# dias atrás'
-    now: 'agora'
-    minute: '1 minuto atrás'
-    minutes: '# minutos atrás'
-    hour: '1 hora atrás'
-    hours: '# horas atrás'
+    days: ''
+    now: ''
+    minute: ''
+    minutes: ''
+    hour: ''
+    hours: ''
   future:
-    days: 'em # dias'
+    days: ''
+    now: ''
+    minute: ''
+    minutes: ''
+    hour: ''
+    hours: ''
+
+time_ago:
+  past:
+    days: ']1,Inf[ # dias atrás'
     now: 'agora'
-    minute: 'em 1 minuto'
-    minutes: 'em # minutos'
-    hour: 'em 1 hora'
-    hours: 'em # horas'
+    minutes: '{1} 1 minuto atrás|]1,Inf[ # minutos atrás'
+    hours: '{1} 1 hora atrás|]1,Inf[ # horas atrás'
+  future:
+    days: ']1,Inf[ em # dias'
+    now: 'agora'
+    minutes: '{1} em 1 minuto|]1,Inf[ em # minutos'
+    hours: '{1} em 1 hora|]1,Inf[ em # horas'
