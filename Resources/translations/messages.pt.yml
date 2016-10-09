@@ -1,21 +1,5 @@
 time_ago:
   past:
-    days: ''
-    now: ''
-    minute: ''
-    minutes: ''
-    hour: ''
-    hours: ''
-  future:
-    days: ''
-    now: ''
-    minute: ''
-    minutes: ''
-    hour: ''
-    hours: ''
-
-time_ago:
-  past:
     days: ']1,Inf[ # dias atrás'
     now: 'agora'
     minutes: '{1} 1 minuto atrás|]1,Inf[ # minutos atrás'
