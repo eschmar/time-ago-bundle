@@ -52,6 +52,7 @@ eschmar_time_ago:
 
 * Belarusian
 * Croatian
+* Czech
 * Dutch
 * English
 * French
@@ -61,6 +62,7 @@ eschmar_time_ago:
 * Hungarian
 * Indonesian
 * Italian
+* Norwegian
 * Polish
 * Portuguese (Brazil)
 * Romanian
