@@ -1,0 +1,11 @@
+time_ago:
+  past:
+    days: '{1} 1 dag siden|]1,Inf[ # dage siden'
+    now: 'lige nu'
+    minutes: '{1} 1 minut siden|]1,Inf[ # minutter siden'
+    hours: '{1} 1 time siden|]1,Inf[ # timer siden'
+  future:
+    days: '{1} om 1 dag|]1,Inf[ om # dage'
+    now: 'lige nu'
+    minutes: '{1} om 1 minut|]1,Inf[ om # minutter'
+    hours: '{1} om 1 time|]1,Inf[ om # timer'
