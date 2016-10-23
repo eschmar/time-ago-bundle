@@ -5,7 +5,7 @@ time_ago:
     minutes: '{1} seminit yang lalu|]1,Inf[ # minit yang lalu'
     hours: '{1} sejam yang lalu|]1,Inf[ # jam yang lalu'
   future:
-    days: '{1} sehari lagi|]1,Inf[# hari lagi'
+    days: '{1} sehari lagi|]1,Inf[ # hari lagi'
     now: 'sekarang'
     minutes: '{1} seminit lagi|]1,Inf[ # minit lagi'
     hours: '{1} sejam lagi|]1,Inf[ # jam lagi'

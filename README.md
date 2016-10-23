@@ -53,6 +53,7 @@ eschmar_time_ago:
 * Belarusian
 * Croatian
 * Czech
+* Danish
 * Dutch
 * English
 * French
