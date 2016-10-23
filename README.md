@@ -62,6 +62,7 @@ eschmar_time_ago:
 * Hungarian
 * Indonesian
 * Italian
+* Malay
 * Norwegian
 * Polish
 * Portuguese (Brazil)
