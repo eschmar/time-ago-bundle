@@ -1,11 +1,11 @@
 time_ago:
   past:
-    days: ']1,Inf[ # hari yang lalu'
+    days: '{1} 1 hari yang lalu|]1,Inf[ # hari yang lalu'
     now: 'baru saja'
     minutes: '{1} 1 menit yang lalu|]1,Inf[ # menit yang lalu'
     hours: '{1} 1 jam yang lalu|]1,Inf[ # jam yang lalu'
   future:
-    days: ']1,Inf[ # hari ke depan'
+    days: '{1} 1 hari ke depan|]1,Inf[ # hari ke depan'
     now: 'sekarang ini juga'
     minutes: '{1} 1 menit lagi|]1,Inf[ # menit lagi'
     hours: '{1} 1 jam lagi|]1,Inf[ # jam lagi'
