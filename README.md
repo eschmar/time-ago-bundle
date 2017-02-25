@@ -31,7 +31,7 @@ $foobar->modify('+4 hours');
 {{ now|ago }}
 {# just now #}
 
-{{ foo|ago('r') }}
+{{ foo|ago }}
 {# 3 minutes ago #}
 
 {{ bar|ago('r') }}
