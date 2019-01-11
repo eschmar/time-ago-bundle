@@ -1,11 +1,11 @@
 time_ago:
   past:
-    days: ']1,Inf[ pred # dnevi'
+    days: '{1} pred 1 dnevom|]1,Inf[ pred # dnevi'
     now: 'pravkar'
     minutes: '{1} 1 minuto nazaj|]1,Inf[ # minut nazaj'
     hours: '{1} 1 uro nazaj|]1,Inf[ # ur nazaj'
   future:
-    days: ']1,Inf[ čez # dni'
+    days: '{1} v 1 dnevu|]1,Inf[ čez # dni'
     now: 'pravkar'
     minutes: '{1} čez 1 minuto|]1,Inf[ čez # minut'
     hours: '{1} čez 1 uro|]1,Inf[ čez # ur'
