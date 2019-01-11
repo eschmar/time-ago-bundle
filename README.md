@@ -1,6 +1,6 @@
 # TimeAgoBundle
-Provides a simple twig filter for expressing time difference in words for Symfony. 
-Uses a range of +-7 days, after that, the actual date is returned.
+Provides a simple twig filter for expressing time difference in words for
+Symfony applications.
 
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
@@ -14,38 +14,60 @@ new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ```
 
 ## Usage
-```php
-$now = new \DateTime();
 
-$foo = new \DateTime();
-$foo->modify('-3 minutes');
-
-$bar = new \DateTime();
-$bar->modify('-3 months');
-
-$foobar = new \DateTime();
-$foobar->modify('+4 hours');
-```
-
+### Examples
 ```twig
-{{ now|ago }}
-{# just now #}
+{{ date('3 years ago')|ago }}
+{# -> 3 years ago #}
 
-{{ foo|ago }}
-{# 3 minutes ago #}
+{{ date('3 months ago')|ago }}
+{# -> 3 months ago #}
 
-{{ bar|ago('r') }}
-{# actual date in 'r' format #}
+{{ date('3 weeks ago')|ago }}
+{# -> 3 weeks ago #}
 
-{{ foobar|ago }}
-{# in 4 hours #}
+{{ date('3 days ago')|ago }}
+{# -> 3 days ago #}
+
+{{ date('3 weeks ago')|ago }}
+{# -> 3 weeks ago #}
+
+{{ date('3 hours ago')|ago }}
+{# -> 3 hours ago #}
+
+{{ date('3 minutes ago')|ago }}
+{# -> 3 minutes ago #}
+
+{{ date('now')|ago }}
+{# -> just now #}
+
+{{ date('+4 hours')|ago }}
+{# -> in 4 hours #}
+
+{# and so on the future (days, weeks, months, year #}
 ```
 
-Change [default format](http://php.net/manual/en/function.date.php) in `config.yml`:
+### Pass the format and the threshold
+```twig
+{{ date('3 years ago')|ago('r', constant('Eschmar\\TimeAgoBundle\\Twig\\TimeAgoExtension::WEEK')) }}
+{# actual date in 'r' format because 3 years ago is more than the defined WEEK threshold #}
+```
+
+## Configuration
+
+### [default format](http://php.net/manual/en/function.date.php) in `config.yml`:
 
 ```yml
 eschmar_time_ago:
     format: 'Y-m-d H:i:s'
+```
+
+### default threshold before using default format:
+
+```yml
+eschmar_time_ago:
+    #use constant class or a number of seconds
+    threshold: !php/const:Eschmar\TimeAgoBundle\TimeAgoExtension::WEEK
 ```
 
 # Translations available

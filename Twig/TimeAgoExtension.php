@@ -11,7 +11,12 @@ use Symfony\Component\Translation\TranslatorInterface;
  **/
 class TimeAgoExtension extends \Twig_Extension
 {
-    const TRANSLATION_NAMESPACE = 'time_ago';
+    const YEAR = 31536000;
+    const MONTH = 2678400;
+    const WEEK = 604800;
+    const DAY = 86400;
+    const HOUR = 3600;
+    const MINUTE = 60;
 
     /**
      * @var TranslatorInterface
@@ -23,10 +28,16 @@ class TimeAgoExtension extends \Twig_Extension
      **/
     private $format;
 
-    public function __construct(TranslatorInterface $translator, $format)
+    /**
+     * @var int
+     **/
+    private $threshold;
+
+    public function __construct(TranslatorInterface $translator, $format, $threshold)
     {
         $this->translator = $translator;
         $this->format = $format;
+        $this->threshold = $threshold;
     }
 
     /**
@@ -53,31 +64,37 @@ class TimeAgoExtension extends \Twig_Extension
      * @return string
      * @author Marcel Eschmann, @eschmar
      **/
-    public function agoFilter(\DateTime $date, $format = null)
+    public function agoFilter(\DateTime $date, $format = null, $threshold = null)
     {
         $diff = time() - $date->format('U');
-        $format = $format ? $format : $this->format;
+        $threshold = $threshold ?: $this->threshold;
+        $prefix = 'time_ago.'. ($diff > -5 ? 'past' : 'future');
 
-        $prefix = self::TRANSLATION_NAMESPACE;
-        $prefix .= $diff > -5 ? '.past' : '.future';
-
-        $diff = abs($diff);
-        $days = floor($diff / 86400);
-
-        if ($days >= 7) return $date->format($format);
-        if ($days > 1) return $this->translator->transChoice($prefix . '.days', $days, ['#' => $days]);
-
-        if ($diff < 60) return $this->translator->trans($prefix . '.now');
-        
-        $m = floor($diff / 60);
-        if ($diff < 120) return $this->translator->transChoice($prefix . '.minutes', 1);
-        if ($diff < 3600) return $this->translator->transChoice($prefix . '.minutes', $m, ['#' => $m]);
-
-        $h = floor($diff / 3600);
-        if ($diff < 7200) return $this->translator->transChoice($prefix . '.hours', 1);
-        if ($diff < 86400) return $this->translator->transChoice($prefix . '.hours', $h, ['#' => $h]);
-
-        return $date->format($format);
+        foreach ([
+            'years' => self::YEAR,
+            'months' => self::MONTH,
+            'weeks' => self::WEEK,
+            'days' => self::DAY,
+            'hours' => self::HOUR,
+            'minutes' => self::MINUTE,
+                     ] as $key => $unit) {
+            $units = floor(abs($diff) / $unit);
+            if ($units >= 1) {
+                if (false !== $threshold && $unit > $threshold) {
+                    goto end;
+                }
+                return $this->translator->transChoice(
+                    sprintf('%s.%s', $prefix, $key),
+                    $units,
+                    ['#' => $units]
+                );
+            }
+        }
+        if (abs($diff) < self::MINUTE){
+            return $this->translator->trans($prefix . '.now');
+        }
+        end:
+        return $date->format($format ? $format : $this->format);
     }
 
-} // END class TimeAgoExtension extends \Twig_Extension
+}

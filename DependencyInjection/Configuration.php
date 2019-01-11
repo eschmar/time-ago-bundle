@@ -2,6 +2,7 @@
 
 namespace Eschmar\TimeAgoBundle\DependencyInjection;
 
+use Eschmar\TimeAgoBundle\Twig\TimeAgoExtension;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
@@ -24,6 +25,9 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('format')
                     ->defaultValue('r')
+                ->end()
+                ->scalarNode('threshold')
+                    ->defaultValue(TimeAgoExtension::WEEK)
                 ->end()
             ->end();
 

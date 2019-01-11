@@ -3,6 +3,6 @@ services:
     time_ago.twig_extension:
         class: Eschmar\TimeAgoBundle\Twig\TimeAgoExtension
         public: false
-        arguments: ['@translator', '%eschmar_time_ago.format%']
+        arguments: ['@translator', '%eschmar_time_ago.format%', '%eschmar_time_ago.threshold%']
         tags:
             - { name: twig.extension }
