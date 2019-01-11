@@ -1,11 +1,17 @@
 time_ago:
   past:
-    days: ']1,Inf[ il y a # jours'
     now: 'maintenant'
     minutes: '{1} il y a 1 minute|]1,Inf[ il y a # minutes'
     hours: '{1} il y a 1 heure|]1,Inf[ il y a # heures'
+    days: '{1} il y a 1 jour|]1,Inf[ il y a # jours'
+    weeks: '{1} il y a 1 semaine|]1,Inf[ il y a # semaines'
+    months: '{1} il y a 1 mois|]1,Inf[ il y a # mois'
+    years: '{1} il y a 1 an|]1,Inf[ il y a # années'
   future:
-    days: ']1,Inf[ dans # jours'
     now: 'maintenant'
     minutes: '{1} dans 1 minute|]1,Inf[ dans # minutes'
     hours: '{1} dans 1 heure|]1,Inf[ dans # heures'
+    days: '{1} dans 1 jour|]1,Inf[ dans # jours'
+    weeks: '{1} dans 1 semaine|]1,Inf[ dans # semaines'
+    months: '{1} dans 1 mois|]1,Inf[ dans # mois'
+    years: '{1} dans 1 an|]1,Inf[ dans # années'
