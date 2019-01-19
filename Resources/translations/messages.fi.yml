@@ -5,7 +5,7 @@ time_ago:
     minutes: '{1} 1 minuutti sitten|]1,Inf[ # minuuttia sitten'
     hours: '{1} 1 tunti sitten|]1,Inf[ # tuntia sitten'
   future:
-    days: '{1} 1 päivän kuluttua|]1,Inf[ # päivän kuluttua'
+    days: '[1,Inf[ # päivän kuluttua'
     now: 'juuri nyt'
     minutes: '{1} 1 minuutin kuluttua|]1,Inf[ # minuutin kuluttua'
     hours: '{1} 1 tunnin kuluttua|]1,Inf[ # tunnin kuluttua'
