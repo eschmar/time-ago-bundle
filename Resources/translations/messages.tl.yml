@@ -1,11 +1,11 @@
 time_ago:
   past:
-    days: ']1,Inf[ # araw ang nakakalipas'
+    days: '{1} 1 araw na nakalipas|]1,Inf[ # araw ang nakakalipas'
     now: 'ngayon lang'
     minutes: '{1} 1 minuto ang nakakalipas|]1,Inf[ mga # minuto ang nakakalipas'
     hours: '{1} 1 oras ang nakakalipas|]1,Inf[ mga # oras ang nakakalipas'
   future:
-    days: ']1,Inf[ sa loob ng # araw'
+    days: '{1} sa 1 araw|]1,Inf[ sa loob ng # araw'
     now: 'ngayon lang'
     minutes: '{1} sa loob ng 1 minuto|]1,Inf[ sa loob ng # minuto'
     hours: '{1} sa loob ng 1 oras|]1,Inf[ sa loob ng # oras'

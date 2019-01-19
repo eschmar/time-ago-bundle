@@ -65,7 +65,7 @@ class TimeAgoExtension extends \Twig_Extension
         $days = floor($diff / 86400);
 
         if ($days >= 7) return $date->format($format);
-        if ($days > 1) return $this->translator->transChoice($prefix . '.days', $days, ['#' => $days]);
+        if ($days >= 1) return $this->translator->transChoice($prefix . '.days', $days, ['#' => $days]);
 
         if ($diff < 60) return $this->translator->trans($prefix . '.now');
         
