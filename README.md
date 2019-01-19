@@ -5,9 +5,13 @@ Uses a range of +-7 days, after that, the actual date is returned.
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
 ```sh
+composer require eschmar/time-ago-bundle ~v1.0.0 # Symfony ^4.1
+```
+
+or for older symfony versions:
+```sh
 composer require eschmar/time-ago-bundle ~v0.4.0 # Symfony ^2.8
 composer require eschmar/time-ago-bundle ~v0.5.0 # Symfony ^3.4
-composer require eschmar/time-ago-bundle ~v1.0.0 # Symfony ^4.0
 ```
 
 app/Appkernel.php:
@@ -16,30 +20,17 @@ new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ```
 
 ## Usage
-```php
-$now = new \DateTime();
-
-$foo = new \DateTime();
-$foo->modify('-3 minutes');
-
-$bar = new \DateTime();
-$bar->modify('-3 months');
-
-$foobar = new \DateTime();
-$foobar->modify('+4 hours');
-```
-
 ```twig
-{{ now|ago }}
+{{ date('now')|ago }}
 {# just now #}
 
-{{ foo|ago }}
+{{ date('now').modify('-3 minutes')|ago }}
 {# 3 minutes ago #}
 
-{{ bar|ago('r') }}
+{{ date('now').modify('-3 months')|ago('r') }}
 {# actual date in 'r' format #}
 
-{{ foobar|ago }}
+{{ date('now').modify('+4 hours')|ago('r') }}
 {# in 4 hours #}
 ```
 
