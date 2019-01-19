@@ -7,20 +7,12 @@ Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" targe
 ```sh
 composer require eschmar/time-ago-bundle ~v0.4.0 # Symfony ^2.8
 composer require eschmar/time-ago-bundle ~v0.5.0 # Symfony ^3.4
+composer require eschmar/time-ago-bundle ~v1.0.0 # Symfony ^4.0
 ```
 
 app/Appkernel.php:
 ```php
 new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
-```
-
-Make sure that a translator is enabled in `config.yml`.
-```yml
-parameters:
-    locale: en
-
-framework:
-    translator: { fallbacks: ['%locale%'] }
 ```
 
 ## Usage
