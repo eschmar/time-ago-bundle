@@ -12,15 +12,21 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 class Configuration implements ConfigurationInterface
 {
+    const ROOT_NODE = 'eschmar_time_ago';
+
     /**
      * {@inheritdoc}
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('eschmar_time_ago');
+        $treeBuilder = new TreeBuilder(static::ROOT_NODE);
 
-        $rootNode
+        // Symfony 4.2+
+        if (method_exists($treeBuilder, 'getRootNode')) $rootNode = $treeBuilder->getRootNode();
+        // Symfony 4.1 and below
+        else $rootNode = $treeBuilder->root(static::ROOT_NODE);
+
+        $treeBuilder->getRootNode()
             ->children()
                 ->scalarNode('format')
                     ->defaultValue('r')
