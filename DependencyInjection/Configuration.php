@@ -15,7 +15,7 @@ class Configuration implements ConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function getConfigiBuilder()
+    public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder(static::ROOT_NODE);
 
