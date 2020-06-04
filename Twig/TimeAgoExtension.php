@@ -2,7 +2,7 @@
 
 namespace Eschmar\TimeAgoBundle\Twig;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Provides a simple twig filter for expressing time difference in words.
