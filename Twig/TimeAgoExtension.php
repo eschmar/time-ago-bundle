@@ -9,7 +9,7 @@ use Symfony\Component\Translation\TranslatorInterface;
  *
  * @author Marcel Eschmann, @eschmar
  **/
-class TimeAgoExtension extends \Twig_Extension
+class TimeAgoExtension extends \Twig\Extension\AbstractExtension
 {
     const TRANSLATION_NAMESPACE = 'time_ago';
 
@@ -43,7 +43,7 @@ class TimeAgoExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('ago', [$this, 'agoFilter']),
+            new \Twig\TwigFilter('ago', [$this, 'agoFilter']),
         ];
     }
 
@@ -80,4 +80,4 @@ class TimeAgoExtension extends \Twig_Extension
         return $date->format($format);
     }
 
-} // END class TimeAgoExtension extends \Twig_Extension
+} // END class TimeAgoExtension extends \Twig\Extension\AbstractExtension
