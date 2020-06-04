@@ -2,14 +2,14 @@
 
 namespace Eschmar\TimeAgoBundle\Twig;
 
-use Symfony\Component\Translation\TranslatorInterface;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 /**
  * Provides a simple twig filter for expressing time difference in words.
  *
  * @author Marcel Eschmann, @eschmar
  **/
-class TimeAgoExtension extends \Twig_Extension
+class TimeAgoExtension extends \Twig\Extension\AbstractExtension
 {
     const TRANSLATION_NAMESPACE = 'time_ago';
 
@@ -43,7 +43,7 @@ class TimeAgoExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('ago', [$this, 'agoFilter']),
+            new \Twig\TwigFilter('ago', [$this, 'agoFilter']),
         ];
     }
 
@@ -65,19 +65,19 @@ class TimeAgoExtension extends \Twig_Extension
         $days = floor($diff / 86400);
 
         if ($days >= 7) return $date->format($format);
-        if ($days >= 1) return $this->translator->transChoice($prefix . '.days', $days, ['#' => $days]);
+        if ($days >= 1) return $this->translator->trans($prefix . '.days', ['#' => $days, '%count%' => $days]);
 
         if ($diff < 60) return $this->translator->trans($prefix . '.now');
-        
+
         $m = floor($diff / 60);
-        if ($diff < 120) return $this->translator->transChoice($prefix . '.minutes', 1);
-        if ($diff < 3600) return $this->translator->transChoice($prefix . '.minutes', $m, ['#' => $m]);
+        if ($diff < 120) return $this->translator->trans($prefix . '.minutes', ['%count%' => 1]);
+        if ($diff < 3600) return $this->translator->trans($prefix . '.minutes', ['#' => $m, '%count%' => $m]);
 
         $h = floor($diff / 3600);
-        if ($diff < 7200) return $this->translator->transChoice($prefix . '.hours', 1);
-        if ($diff < 86400) return $this->translator->transChoice($prefix . '.hours', $h, ['#' => $h]);
+        if ($diff < 7200) return $this->translator->trans($prefix . '.hours', ['%count%' => 1]);
+        if ($diff < 86400) return $this->translator->trans($prefix . '.hours', ['#' => $h, '%count%' => $h]);
 
         return $date->format($format);
     }
 
-} // END class TimeAgoExtension extends \Twig_Extension
+} // END class TimeAgoExtension extends \Twig\Extension\AbstractExtension

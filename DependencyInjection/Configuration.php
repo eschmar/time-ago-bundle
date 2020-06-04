@@ -6,9 +6,7 @@ use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * This is the class that validates and merges configuration from your app/config files.
- *
- * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/configuration.html}
+ * {@inheritDoc}
  */
 class Configuration implements ConfigurationInterface
 {
@@ -21,10 +19,12 @@ class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder(static::ROOT_NODE);
 
-        // Symfony 4.2+
-        if (method_exists($treeBuilder, 'getRootNode')) $rootNode = $treeBuilder->getRootNode();
-        // Symfony 4.1 and below
-        else $rootNode = $treeBuilder->root(static::ROOT_NODE);
+        // BC layer for symfony/config 4.1 and older
+        if (! \method_exists($treeBuilder, 'getRootNode')) {
+            $rootNode = $treeBuilder->root(static::ROOT_NODE);
+        } else {
+            $rootNode = $treeBuilder->getRootNode();
+        }
 
         $treeBuilder->getRootNode()
             ->children()

@@ -18,6 +18,7 @@
     "target-dir": "Eschmar/TimeAgoBundle",
     "require": {
         "php": ">=7.1.0",
+        "twig/twig": "^3.0.0",
         "symfony/flex": "*"
     }
 }

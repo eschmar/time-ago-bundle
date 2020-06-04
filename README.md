@@ -5,16 +5,17 @@ Uses a range of +-7 days, after that, the actual date is returned.
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
 ```sh
-composer require eschmar/time-ago-bundle ~v1.0 # Symfony ^4.1
+composer require eschmar/time-ago-bundle ^v2.0.0 # Symfony ^5.0
 ```
 
 or for older symfony versions:
 ```sh
+composer require eschmar/time-ago-bundle ^v1.1.0 # Symfony ^4.x
 composer require eschmar/time-ago-bundle ~v0.4.0 # Symfony ^2.8
 composer require eschmar/time-ago-bundle ~v0.5.0 # Symfony ^3.4
 ```
 
-app/Appkernel.php:
+app/Appkernel.php (Symfony <4):
 ```php
 new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
 ```
