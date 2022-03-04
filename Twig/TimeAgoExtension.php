@@ -53,7 +53,7 @@ class TimeAgoExtension extends \Twig\Extension\AbstractExtension
      * @return string
      * @author Marcel Eschmann, @eschmar
      **/
-    public function agoFilter(\DateTime $date, $format = null)
+    public function agoFilter(\DateTimeInterface $date, $format = null)
     {
         $diff = time() - $date->format('U');
         $format = $format ? $format : $this->format;
