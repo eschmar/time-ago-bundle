@@ -11,7 +11,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
  **/
 class TimeAgoExtension extends \Twig\Extension\AbstractExtension
 {
-    const TRANSLATION_NAMESPACE = 'time_ago';
+    public const TRANSLATION_NAMESPACE = 'time_ago';
 
     /**
      * @var TranslatorInterface
@@ -29,10 +29,7 @@ class TimeAgoExtension extends \Twig\Extension\AbstractExtension
         $this->format = $format;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'time_ago_extension';
     }
@@ -40,7 +37,7 @@ class TimeAgoExtension extends \Twig\Extension\AbstractExtension
     /**
      * {@inheritdoc}
      */
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new \Twig\TwigFilter('ago', [$this, 'agoFilter']),
@@ -50,13 +47,12 @@ class TimeAgoExtension extends \Twig\Extension\AbstractExtension
     /**
      * Returns relative time in words (translated).
      *
-     * @return string
      * @author Marcel Eschmann, @eschmar
      **/
-    public function agoFilter(\DateTimeInterface $date, $format = null)
+    public function agoFilter(\DateTimeInterface $date, string $format = null): string
     {
         $diff = time() - $date->format('U');
-        $format = $format ? $format : $this->format;
+        $format = $format ?: $this->format;
 
         $prefix = self::TRANSLATION_NAMESPACE;
         $prefix .= $diff > -5 ? '.past' : '.future';
@@ -80,4 +76,4 @@ class TimeAgoExtension extends \Twig\Extension\AbstractExtension
         return $date->format($format);
     }
 
-} // END class TimeAgoExtension extends \Twig\Extension\AbstractExtension
+}

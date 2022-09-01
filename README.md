@@ -2,22 +2,28 @@
 Provides a simple twig filter for expressing time difference in words for Symfony. 
 Uses a range of +-7 days, after that, the actual date is returned.
 
+This version covers symfony 4+, if you use an older symfony version, please have a look at older version of this bundle.
+
+| Bundle-Version | Symfony       |
+|----------------|---------------|
+| ^v2.0.0        | ^5.0 and ^6.0 |
+| ^v1.1.0        | ^4.x          |
+| ~v0.5.0        | ^3.4          |
+| ~v0.4.0        | ^2.8          |
+
+
 ## Install
 Composer (<a href="https://packagist.org/packages/eschmar/time-ago-bundle" target="_blank">Packagist</a>):
 ```sh
-composer require eschmar/time-ago-bundle ^v2.0.0 # Symfony ^5.0
+composer require eschmar/time-ago-bundle
 ```
 
-or for older symfony versions:
-```sh
-composer require eschmar/time-ago-bundle ^v1.1.0 # Symfony ^4.x
-composer require eschmar/time-ago-bundle ~v0.4.0 # Symfony ^2.8
-composer require eschmar/time-ago-bundle ~v0.5.0 # Symfony ^3.4
-```
-
-app/Appkernel.php (Symfony <4):
+If you do not use [Symfony Flex](https://symfony.com/doc/current/setup/flex.html), add this bundle to config/bundles.php (Symfony > 4):
 ```php
-new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle(),
+return [
+...
+new Eschmar\TimeAgoBundle\EschmarTimeAgoBundle::class => ['all' => true],
+];
 ```
 
 ## Usage
@@ -68,7 +74,7 @@ eschmar_time_ago:
 * Swedish
 * Tagalog
 * Turkish
-* Ukranian
+* Ukrainian
 * Vietnamese
 
 # License
